@@ -1,0 +1,211 @@
+.beauty-tips-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--surface);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section-title {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 3rem;
+  margin-bottom: var(--spacing-xl);
+  font-family: var(--font-secondary);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-full);
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.category-icon {
+  font-size: 1.2rem;
+}
+
+.category-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.category-btn.active {
+  background-color: #d4a373;
+  color: white;
+}
+
+.tips-container {
+  position: relative;
+  padding: var(--spacing-md);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+.tip-card {
+  position: relative;
+  background-color: #fff0f5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 400px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.tip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tip-card-content {
+  position: relative;
+  padding: var(--spacing-lg);
+  height: 100%;
+}
+
+.tip-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.tip-card h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+  font-family: var(--font-secondary);
+  position: relative;
+}
+
+.tip-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.tip-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.tip-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 77, 141, 0.9),
+    rgba(204, 51, 102, 0.95)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.tip-overlay p.tip-details {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .category-nav {
+    flex-wrap: wrap;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .tip-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tip-card {
+    height: 300px;
+  }
+
+  .tip-card h3 {
+    font-size: 1.2rem;
+  }
+}

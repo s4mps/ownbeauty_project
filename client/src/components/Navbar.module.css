@@ -1,0 +1,80 @@
+.navbar {
+  @apply fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-[1000] py-4 px-6 shadow-sm transition-all duration-300;
+}
+
+.navbar-container {
+  @apply container mx-auto flex items-center justify-between;
+}
+
+.logo {
+  @apply flex items-center gap-2 text-2xl font-sans font-bold text-primary hover:text-secondary transition-colors duration-300 bg-transparent border-none cursor-pointer;
+}
+
+.logo-icon {
+  @apply text-3xl text-primary;
+}
+
+.nav-links {
+  @apply hidden lg:flex items-center gap-8;
+}
+
+.nav-link {
+  @apply relative font-sans text-dark/80 hover:text-primary transition-colors duration-300 text-sm uppercase tracking-wider font-medium;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.mobile-menu-btn {
+  @apply lg:hidden p-2 text-dark/80 hover:text-primary transition-colors duration-300;
+}
+
+.mobile-menu {
+  @apply fixed top-0 left-0 w-full h-screen bg-[#f8f7f4] backdrop-blur-md shadow-lg py-4 px-6 transform transition-transform duration-300 ease-in-out lg:hidden z-50;
+}
+
+.mobile-menu.open {
+  @apply translate-y-0;
+}
+
+.mobile-menu.closed {
+  @apply -translate-y-full;
+}
+
+.mobile-nav-links {
+  @apply flex flex-col gap-4;
+}
+
+.mobile-nav-link {
+  @apply text-dark/80 hover:text-primary transition-colors duration-300 text-base font-medium py-2 border-b border-gray-100;
+}
+
+.mobile-nav-buttons {
+  @apply flex flex-col gap-4 mt-4 pt-4 border-t border-gray-100;
+}
+
+.nav-buttons {
+  @apply hidden lg:flex items-center gap-4;
+}
+
+.nav-button {
+  @apply flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium;
+}
+
+.nav-button.primary {
+  @apply bg-primary text-white hover:bg-secondary;
+}
+
+.nav-button.secondary {
+  @apply bg-primary text-white hover:bg-secondary;
+}
+
+.nav-icon {
+  @apply text-lg;
+}

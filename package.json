@@ -1,0 +1,25 @@
+{
+  "name": "ownbeauty-fullstack",
+  "version": "1.0.0",
+  "description": "FULL-stack makeup e-commerce website",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "mysql",
+    "makeup"
+  ],
+  "author": "sampana",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-normalize": "^13.0.1",
+    "postcss-preset-env": "^10.2.4"
+  }
+}
